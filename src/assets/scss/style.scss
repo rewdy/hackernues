@@ -1,0 +1,114 @@
+// Core stylesheet
+// ---
+// Please put compontent styles in components...
+// Only global styles go here.
+
+// -- Variables
+
+// Layout
+$grid-columns:12;
+$grid-gutter:4rem;
+$breakpoint-sm:576px;
+$breakpoint-md:768px;
+$breakpoint-lg:992px;
+$breakpoint-xl:1200px;
+
+$margin-standard:1.5rem;
+
+// Type
+$font-size:18px;
+$font-small:14px;
+$font-large:22px;
+$font-family:'Inter', sans-serif;
+$alt-font:$font-family; // this is for an alternative font
+$font-weight-light:300;
+$font-weight-normal:400;
+$font-weight-bold:700;
+$font-scale:1.6;
+$line-height:$font-scale + em;
+$text-margin-bottom:1.5rem;
+
+// Background colors
+$page-background:#fff;
+$footer-background:#e6e6e6;
+
+// Text colors
+$text-color:#000;
+$text-light:#777;
+$color-light:$text-light;
+
+// Design colors
+$accent: #222;
+$color-accent:$accent;
+$pop: #ff6825;
+$color-pop:$pop;
+$selection: fade-out($pop, 0.3);
+$link-color: $accent;
+$link-hover: $pop;
+
+// Indicator colors
+$color-info: $pop;
+$screen-info: change-color($color-info, $lightness:90%);
+$color-success: #1d9428;
+$screen-success: change-color($color-success, $lightness:90%);
+$color-warning: #d4ae2f;
+$screen-warning: change-color($color-warning, $lightness:90%);
+$color-danger: #c0343b;
+$screen-danger: change-color($color-danger, $lightness:90%);
+
+$colors: (
+	"accent": $color-accent,
+	"pop": $color-pop,
+	"light": $color-light,
+	"info": $color-info,
+	"success": $color-success,
+	"warning": $color-warning,
+	"danger": $color-danger,
+);
+
+// Form colors
+$form-color-button: $link-color;
+$form-color-focus: $text-light;
+
+// Line colors
+$line-color: #ddd;
+$line-color-dark: #999;
+
+// Radii
+$master-radius: 0;
+$form-radius: $master-radius;
+$button-radius: $form-radius;
+$box-radius: $master-radius;
+
+// Padding
+$padding-menu:1rem 1rem;
+$padding-button:0.5rem 1rem;
+$padding-input:0.5rem;
+$padding-table-cell:0.75rem 0.25rem;
+
+// Screens
+$screen: #e6e6e6;
+$screen-lt: #f2f2f2;
+$screen-dk: #444;
+
+@import "modules/mixins";
+
+// -- Global Styles
+@import "modules/core";
+@import "modules/type";
+
+.feather {
+	width: 1.25em;
+	height: 1em;
+	line-height: 1em;
+	stroke: currentColor;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill: none;
+	position: relative;
+	top: 3px;
+	vertical-align:baseline;
+}
+
+@import "modules/vue-transitions";
