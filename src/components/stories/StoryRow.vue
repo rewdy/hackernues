@@ -123,7 +123,7 @@ export default {
 <style lang="scss">
 .story-item {
   position: relative;
-  padding: 1em 0.5em 1.5em;
+  padding: 1em 0 1.5em;
   border-bottom: 1px solid $line-color;
 }
 h2.story-title {

@@ -1,7 +1,9 @@
 <template>
-  <header class="site-header">
-    <router-link to="/" class="site-title">HackerNeus</router-link>
-  </header>
+  <transition name="slow-slide" appear>
+    <header class="site-header">
+      <router-link to="/" class="site-title">HackerNeus</router-link>
+    </header>
+  </transition>
 </template>
 
 <script>
@@ -34,11 +36,21 @@ export default {
   color:inherit;
   padding-right:0.15em;
   transition:all 300ms ease-out;
+  margin-left:-0.05em;
   &:hover {
     color:inherit;
     background-color:fade-out(#000, 0.85);
   }
 }
+
+.slow-slide-enter-active {
+  transition: transform 1500ms ease-out, opacity 1500ms ease-out;
+}
+.slow-slide-enter {
+  opacity: 0;
+  transform: translateY(0.35em);
+}
+
 @keyframes breathe {
   from {
     color: $text-color;
